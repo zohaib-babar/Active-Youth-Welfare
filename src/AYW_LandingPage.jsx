@@ -59,22 +59,12 @@ export default function AYWLandingPage() {
   const [activeNav, setActiveNav] = useState("Home");
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
-  const [counted, setCounted] = useState(false);
   const statsRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 60);
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => { if (entry.isIntersecting) setCounted(true); },
-      { threshold: 0.3 }
-    );
-    if (statsRef.current) observer.observe(statsRef.current);
-    return () => observer.disconnect();
   }, []);
 
   const scrollTo = (id) => {
@@ -659,7 +649,7 @@ export default function AYWLandingPage() {
             <p className="urdu-text" style={{ color: "rgba(255,255,255,0.7)", fontSize: 17, marginBottom: 24 }}>
               ہمارے ساتھ رضاکارانہ کام کریں اور اپنے گاؤں کی تعمیر میں حصہ لیں
             </p>
-            <button className="btn-primary">Become a Volunteer</button>
+            <button className="btn-primary">Become a Volunteer <span>Admin</span> Amir Wattoo +966 50 785 7253</button>
           </div>
         </div>
       </section>

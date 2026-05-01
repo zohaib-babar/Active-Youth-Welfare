@@ -362,11 +362,23 @@ export default function AYWLandingPage() {
           }}>
             <div style={{
               width: 130, height: 130, borderRadius: "50%",
-              background: "linear-gradient(135deg, #1a6b3c, #2d9b57)",
+              background: "rgba(255,255,255,0.12)",
               display: "flex", alignItems: "center", justifyContent: "center",
-              fontFamily: "'Cinzel', serif", fontWeight: 800, color: "#c9a84c", fontSize: 26,
-              letterSpacing: 2
-            }}>AYW</div>
+              overflow: "hidden",
+              padding: 12,
+              boxShadow: "0 0 0 1px rgba(255,255,255,0.25) inset"
+            }}>
+              <img
+                src="/WhatsApp Image 2026-04-30 at 11.32.31 AM.jpeg"
+                alt="AYW logo"
+                style={{
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "contain",
+                  display: "block"
+                }}
+              />
+            </div>
             <div style={{
               position: "absolute", top: -4, right: -4,
               width: 24, height: 24, borderRadius: "50%",
